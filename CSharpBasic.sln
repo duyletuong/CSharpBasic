@@ -45,6 +45,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Buoi 7 - Winform", "Buoi 7 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaoKhung", "TaoKhung\TaoKhung.csproj", "{2AC107C1-669F-4B3E-8DCA-4ADB8E085F12}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Buoi 8 - Picker", "Buoi 8 - Picker", "{EA692DD1-4E2C-4C50-BE61-86F0E56478CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateBeamPicker", "CreateBeamPicker\CreateBeamPicker.csproj", "{67462928-2843-4783-BB33-32A576C2FA58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,10 @@ Global
 		{2AC107C1-669F-4B3E-8DCA-4ADB8E085F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AC107C1-669F-4B3E-8DCA-4ADB8E085F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AC107C1-669F-4B3E-8DCA-4ADB8E085F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67462928-2843-4783-BB33-32A576C2FA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67462928-2843-4783-BB33-32A576C2FA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67462928-2843-4783-BB33-32A576C2FA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67462928-2843-4783-BB33-32A576C2FA58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -131,6 +139,7 @@ Global
 		{5A1ED7F5-3A1D-4437-8AAE-63F4A08EDE24} = {951CDCE5-3AB9-4EE2-B105-4A83F616A4AE}
 		{63F3AC76-88A8-4573-8CAE-ED8A55635D09} = {75ADF170-EE47-47F2-ADB3-E747687DA6E5}
 		{2AC107C1-669F-4B3E-8DCA-4ADB8E085F12} = {9486DC29-7137-44C6-80D9-EE26C405FC43}
+		{67462928-2843-4783-BB33-32A576C2FA58} = {EA692DD1-4E2C-4C50-BE61-86F0E56478CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9BE179ED-9569-45FB-8027-DB5555729C21}

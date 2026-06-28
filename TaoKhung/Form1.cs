@@ -42,11 +42,12 @@ namespace TaoKhung
             double chieuCaoDinhKeo = double.Parse(txtChieuCaoDinhKeo.Text);
             int soKhung = Convert.ToInt32(txtSoKhung.Text);
 
-            for (int i = 1; i <= soKhung; i++)
+            for (int i = 0; i < soKhung; i++)
             {
                 Beam cot1 = new Beam();
                 cot1.Profile.ProfileString = txtProfileCot.Text;
                 cot1.Material.MaterialString = "S235JR";
+                cot1.Class = "3";
 
                 cot1.Position.Rotation = Position.RotationEnum.FRONT;
                 cot1.Position.Depth = Position.DepthEnum.MIDDLE;
@@ -63,6 +64,7 @@ namespace TaoKhung
                 Beam cot2 = new Beam();
                 cot2.Profile.ProfileString = txtProfileCot.Text;
                 cot2.Material.MaterialString = "S235JR";
+                cot2.Class = "3";
 
                 cot2.Position.Rotation = Position.RotationEnum.FRONT;
                 cot2.Position.Depth = Position.DepthEnum.MIDDLE;
@@ -76,6 +78,41 @@ namespace TaoKhung
 
                 cot2.Insert();
 
+                // Tạo kèo
+
+                Beam keo1 = new Beam();
+                keo1.Profile.ProfileString = txtProfileKeo.Text;
+                keo1.Material.MaterialString = "S235JR";
+                keo1.Class = "4";
+
+                keo1.Position.Rotation = Position.RotationEnum.TOP;
+                keo1.Position.Depth = Position.DepthEnum.BEHIND;
+                keo1.Position.Plane = Position.PlaneEnum.MIDDLE;
+
+                Point startkeo1 = endCot1;
+                Point endkeo1 = new Point(khauDo/2, i * nhip, chieuCaoDinhKeo);
+
+                keo1.StartPoint = startkeo1;
+                keo1.EndPoint = endkeo1;
+
+                keo1.Insert();
+
+                Beam keo2 = new Beam();
+                keo2.Profile.ProfileString = txtProfileKeo.Text;
+                keo2.Material.MaterialString = "S235JR";
+                keo2.Class = "4";
+
+                keo2.Position.Rotation = Position.RotationEnum.TOP;
+                keo2.Position.Depth = Position.DepthEnum.BEHIND;
+                keo2.Position.Plane = Position.PlaneEnum.MIDDLE;
+
+                Point startkeo2 = endCot2;
+                Point endkeo2 = endkeo1;
+
+                keo2.StartPoint = startkeo2;
+                keo2.EndPoint = endkeo2;
+
+                keo2.Insert();
             }
 
             model.CommitChanges();
