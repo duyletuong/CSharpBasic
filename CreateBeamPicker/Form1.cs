@@ -63,7 +63,6 @@ namespace CreateBeamPicker
             Point startPoint = picker.PickPoint("Xin mời chọn điểm start Point");
             Point endPoint = picker.PickPoint("Xin mời chọn end Point");
 
-            picker.PickObject(Picker.PickObjectEnum.PICK_ONE_PART);
            
             myBeam.StartPoint= startPoint;
             myBeam.EndPoint= endPoint;
@@ -73,10 +72,6 @@ namespace CreateBeamPicker
             new Model().CommitChanges();
         }
 
-        private void profileCatalog1_SelectClicked(object sender, EventArgs e)
-        {
-            profileCatalog1.SelectedProfile = txtProfile.Text;
-        }
 
         private void profileCatalog1_SelectionDone(object sender, EventArgs e)
         {

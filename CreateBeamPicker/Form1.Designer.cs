@@ -161,22 +161,20 @@
             // 
             this.profileCatalog1.BackColor = System.Drawing.Color.Transparent;
             this.profileCatalog1.ButtonText = "albl_Select__";
-            this.profileCatalog1.Location = new System.Drawing.Point(301, 12);
+            this.profileCatalog1.Location = new System.Drawing.Point(302, 13);
             this.profileCatalog1.Name = "profileCatalog1";
             this.profileCatalog1.SelectedProfile = "";
-            this.profileCatalog1.Size = new System.Drawing.Size(106, 27);
+            this.profileCatalog1.Size = new System.Drawing.Size(88, 27);
             this.profileCatalog1.TabIndex = 4;
-            this.profileCatalog1.SelectClicked += new System.EventHandler(this.profileCatalog1_SelectClicked);
-            this.profileCatalog1.SelectionDone += new System.EventHandler(this.profileCatalog1_SelectionDone);
             // 
             // materialCatalog1
             // 
             this.materialCatalog1.BackColor = System.Drawing.Color.Transparent;
             this.materialCatalog1.ButtonText = "albl_Select__";
-            this.materialCatalog1.Location = new System.Drawing.Point(301, 52);
+            this.materialCatalog1.Location = new System.Drawing.Point(302, 45);
             this.materialCatalog1.Name = "materialCatalog1";
             this.materialCatalog1.SelectedMaterial = "";
-            this.materialCatalog1.Size = new System.Drawing.Size(106, 27);
+            this.materialCatalog1.Size = new System.Drawing.Size(88, 27);
             this.materialCatalog1.TabIndex = 5;
             // 
             // Form1
