@@ -171,7 +171,7 @@ namespace MyApp
             ///
 
             //trả về workplane của ngừời dùng
-            wpHandler.SetCurrentTransformationPlane(userTransformationPlane)
+            wpHandler.SetCurrentTransformationPlane(userTransformationPlane);
 
             model.CommitChanges();
         }
