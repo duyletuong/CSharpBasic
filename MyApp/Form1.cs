@@ -175,5 +175,77 @@ namespace MyApp
 
             model.CommitChanges();
         }
+
+        private void btnCheckLength12m_Click(object sender, EventArgs e)
+        {
+            TSMUI.ModelObjectSelector selector = new TSMUI.ModelObjectSelector();
+
+            ModelObjectEnumerator selected = selector.GetSelectedObjects();
+            ArrayList arrayList = new ArrayList();
+
+            while (selected.MoveNext())
+            {
+                if (selected.Current is Part)
+                {
+                    Part part = selected.Current as Part;
+
+                    double length = 0;
+                    bool isSuccess = part.GetReportProperty("LENGTH", ref length);
+
+                    part.SetUserProperty("ABCXYZ", length);
+
+
+                    if (isSuccess == true && length >= 12000)
+                    {
+                        arrayList.Add(part);
+                    }
+                }
+            }
+
+            selector.Select(arrayList);
+            MessageBox.Show("Phat hien: " + arrayList.Count.ToString() + " dam dai hon 12m");
+        }
+
+        private void btnCheckAssembly12m_Click(object sender, EventArgs e)
+        {
+            TSMUI.ModelObjectSelector selector = new TSMUI.ModelObjectSelector();
+
+            ModelObjectEnumerator selected = selector.GetSelectedObjects();
+            ArrayList arrayList = new ArrayList();
+
+            while (selected.MoveNext())
+            {
+                if (selected.Current is Assembly)
+                {
+                    Assembly assembly = selected.Current as Assembly;
+
+                    double length = 0;
+                    bool isSuccess = assembly.GetReportProperty("LENGTH", ref length);
+
+                    if (isSuccess == true && length >= 12000)
+                    {
+                        arrayList.Add(assembly);
+                    }
+                }
+
+
+                //else if (selected.Current is Part)
+                //{
+                //    Part part = selected.Current as Part;
+
+                //    Assembly assembly = part.GetAssembly();
+                //    double length = 0;
+                //    bool isSuccess = assembly.GetReportProperty("LENGTH", ref length);
+
+                //    if (isSuccess == true && length >= 12000)
+                //    {
+                //        arrayList.Add(assembly);
+                //    }
+                //}
+            }
+
+            selector.Select(arrayList);
+            MessageBox.Show("Phat hien: " + arrayList.Count.ToString() + " Assembly dai hon 12m");
+        }
     }
 }

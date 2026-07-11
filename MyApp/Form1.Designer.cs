@@ -37,6 +37,8 @@
             this.btnCreatePolybeam = new System.Windows.Forms.Button();
             this.btnCreateBolt = new System.Windows.Forms.Button();
             this.btnSetWorkPlaneToBEam = new System.Windows.Forms.Button();
+            this.btnCheckLength12m = new System.Windows.Forms.Button();
+            this.btnCheckAssembly12m = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSwaphandler
@@ -125,11 +127,33 @@
             this.btnSetWorkPlaneToBEam.UseVisualStyleBackColor = true;
             this.btnSetWorkPlaneToBEam.Click += new System.EventHandler(this.btnSetWorkPlaneToBEam_Click);
             // 
+            // btnCheckLength12m
+            // 
+            this.btnCheckLength12m.Location = new System.Drawing.Point(314, 129);
+            this.btnCheckLength12m.Name = "btnCheckLength12m";
+            this.btnCheckLength12m.Size = new System.Drawing.Size(137, 46);
+            this.btnCheckLength12m.TabIndex = 8;
+            this.btnCheckLength12m.Text = "Check Part length: 12m";
+            this.btnCheckLength12m.UseVisualStyleBackColor = true;
+            this.btnCheckLength12m.Click += new System.EventHandler(this.btnCheckLength12m_Click);
+            // 
+            // btnCheckAssembly12m
+            // 
+            this.btnCheckAssembly12m.Location = new System.Drawing.Point(314, 181);
+            this.btnCheckAssembly12m.Name = "btnCheckAssembly12m";
+            this.btnCheckAssembly12m.Size = new System.Drawing.Size(137, 46);
+            this.btnCheckAssembly12m.TabIndex = 9;
+            this.btnCheckAssembly12m.Text = "Check Assembly length: 12m";
+            this.btnCheckAssembly12m.UseVisualStyleBackColor = true;
+            this.btnCheckAssembly12m.Click += new System.EventHandler(this.btnCheckAssembly12m_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 279);
+            this.Controls.Add(this.btnCheckAssembly12m);
+            this.Controls.Add(this.btnCheckLength12m);
             this.Controls.Add(this.btnSetWorkPlaneToBEam);
             this.Controls.Add(this.btnCreateBolt);
             this.Controls.Add(this.btnCreatePolybeam);
@@ -160,6 +184,8 @@
         private System.Windows.Forms.Button btnCreatePolybeam;
         private System.Windows.Forms.Button btnCreateBolt;
         private System.Windows.Forms.Button btnSetWorkPlaneToBEam;
+        private System.Windows.Forms.Button btnCheckLength12m;
+        private System.Windows.Forms.Button btnCheckAssembly12m;
     }
 }
 
