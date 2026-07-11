@@ -194,7 +194,6 @@ namespace MyApp
 
                     part.SetUserProperty("ABCXYZ", length);
 
-
                     if (isSuccess == true && length >= 12000)
                     {
                         arrayList.Add(part);
